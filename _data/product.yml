@@ -1,0 +1,48 @@
+# Product.yml
+# This is the main information about what you've created.
+# Loading everything here helps organize your thoughts and update in one
+# place, from one truth. The entire landing page is generated here.
+
+# Contact information
+# NOTE: _config.yaml settings are ignored for these settings.
+# OSS Soft-Serve looks here for all relevant information
+title: OSS Soft-Serve, now in GitHub flavour
+baseurl: ""
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+email: kevin@hougasian.com
+twitter: hougasian
+github:  hougasian
+
+# Basic product information.
+name: OSS Soft Serve
+# If you have nothing to say, you should, but we'll skip to installation
+description: "
+<span>OSS Soft-Serve</span> is a Jekyll template built for developers to
+showcase what they've built, tell people how to quickly use it, and provide
+documentation to keep that product on track."
+logo:         #/images/path/to/logo
+
+# Version and license
+version: 1.0  # http://semver.org/
+license: MIT # https://opensource.org/licenses/MIT
+
+# Where is your product available?
+# If you need a source not listed, add below. OSS Soft-Serve will loop.
+main_repo:
+  name: Github
+  url: https://github.com/hougasian/oss-soft-serve
+  fork: true # assumes Github if true; adds upper corner badge
+  color: olive # fork badge color: Red Orange Yellow Olive Green Teal Blue Violet Purple Pink Brown Grey Black
+
+# Any secondary distribution sources?
+repos:
+  gem:
+  nuget:
+
+# Product CTAs (Calls to Action).
+cta:
+  main: "A Jekyll template for that thing you made!"
+  secondary: "Build it, document it, promote it, the <span>soft-serve</span> way."
+
+# Installation.
+# See installation.yaml

@@ -1,0 +1,17 @@
+
+<footer class="ui text container">
+
+  <div class="ui horizontal divider">
+    {% if oss.github %}<a href="https://github.com/{{ oss.github }}"><i class="large github icon"></i></a>{% endif %}
+    {% if oss.email %}<a href="{{ oss.email | prepend: "mailto:" }}"><i class="large envelope icon"></i></a>{% endif %}
+    {% if oss.twitter %}<a href="https://twitter.com/{{ oss.twitter }}"><i class="large twitter icon"></i></a>{% endif %}
+  </div>
+
+  <p>&copy;<time></time> {{ oss.name }}</p>
+  {% if oss.version ||oss.license %}
+  <p class="versioning">
+    {% if oss.version %}<span>Version: {{ oss.version }}</span>{% endif %}
+    {% if oss.license %}<span>License: {{ oss.license }}</span>{% endif %}
+  </p>
+  {% endif %}
+</footer>

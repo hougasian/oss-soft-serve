@@ -1,0 +1,16 @@
+.oss {
+  &.docs {
+    &.masthead {
+      background: $masthead-background;
+      height: 150px; // TEMPORARY
+      padding: 4rem 0;
+      h1 {
+        color: $white;
+      }
+    }
+    &.main.segment {
+      left: 35vw;
+      width: 50vw;
+    }
+  }
+}

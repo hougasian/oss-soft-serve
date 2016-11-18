@@ -1,0 +1,7 @@
+# Populate your chapter structure here
+
+chapters:
+- overview
+- release notes
+- installation
+- customizing
