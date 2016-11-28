@@ -4,7 +4,13 @@ layout: default
 {% assign oss = site.data.product %}
 <div class="oss docs ui middle aligned column masthead">
   <div class="ui container">
-    <h1>{{ oss.name }}</h1>
+    <div class="ui top fixed inverted menu">
+      <h1>{{ oss.name }}</h1>
+      <div class="right floated menu">
+        {% if oss.version %}<div class="item">{{ oss.name }} {{ oss.version }}</div>{% endif %}
+        {% if oss.main_repo.name == "Github" %}<a class="item" href="{{ oss.main_repo.url }}" target="_blank"><i class="large github alternate icon"></i></a>{% endif %}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -26,9 +32,15 @@ layout: default
     </div>
   </div>
 
-  {% if page.title %}
-  <h2 class="ui dividing header">{{ page.title }}</h2>
+  {% if post.title %}
+  <h2 class="ui header">{{ post.title }}</h2>
+  <div class="horizontal divider"></div>
   {% endif %}
+
+  <div class="toc">
+
+  </div>
+
   {{ content }}
 
 </div>

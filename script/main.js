@@ -18,4 +18,5 @@ $(function() {
         n = d.getFullYear();
   $('footer time')
   .text(n);
+
 });
