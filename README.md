@@ -26,19 +26,75 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
 
-## Contributing
+There are quite a few well-done, and over-done, templates for agencies, portfolios and blogs. What about the developer who wants to just promote this great thing they made?
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Your thing, simply presented & well documented for all to see. Nothing aggressive, just soft-serve?
 
-## Development
+## Installation
 
-To set up your environment to develop this theme, run `bundle install`.
+Add this to your `Gemfile`.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+```ruby
+gem "oss-soft-serve"
+```
 
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+Add this to your `_config.yaml`.
+
+```yaml
+theme: oss-soft-serve
+permalink: /docs/:title
+
+# Basic product information.
+name: OSS Soft Serve
+logo: #/images/path/to/logo
+
+# Version and license
+version: 1.0  # http://semver.org/
+license: MIT # https://opensource.org/licenses/MIT
+
+# Where is your product available?
+# If you need a source not listed, add below. OSS Soft-Serve will loop.
+main_repo:
+  name: Github
+  url: https://github.com/hougasian/oss-soft-serve
+  fork: true # assumes Github if true; adds upper corner badge
+  color: olive # fork badge color: Red Orange Yellow Olive Green Teal Blue Violet Purple Pink Brown Grey Black
+
+# Any secondary distribution sources?
+repos:
+  gem:
+  nuget:
+
+# Product CTAs (Calls to Action).
+cta:
+  main: "A Jekyll template for that thing you made!"
+  secondary: "Build it, document it, promote it, the <span>soft-serve</span> way."
+```
+
+Delete `about.md`.
+```
+rm about.md
+```
+
+Add `docs.md` and paste the following
+
+```ruby
+---
+layout: document
+permalink: /docs/
+---
+{% raw %}  
+{% include getting-started.md %}
+{% endraw %}
+```
+
+Bring it all together with...
+
+```
+$ bundle install
+$ jekyll s
+```
 
 ## License
 
