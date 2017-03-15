@@ -5,7 +5,9 @@ layout: default
 <div class="oss docs ui middle aligned column masthead">
   <div class="ui container">
     <div class="ui top fixed inverted menu">
-      <h1>{{ site.name }}</h1>
+      <a href="/">
+      <h1>{% if site.logo %}<img src="{{ site.logo }}" alt="{{ site.name }}" height="50px">{% else %}{{ site.name }}{% endif %}</h1>
+      </a>
       <div class="right floated menu">
         {% if site.version %}<div class="item">{{ site.name }} {{ site.version }}</div>{% endif %}
         {% if site.main_repo.name == "Github" %}<a class="item" href="{{ site.main_repo.url }}" target="_blank"><i class="large github alternate icon"></i></a>{% endif %}
@@ -19,7 +21,7 @@ layout: default
     <div class="ui vertical following fluid accordion text menu">
       {% assign sorted_cats = site.categories | sort %}
       {% for category in sorted_cats %}
-      {% assign sorted_posts = category[1] | reversed %}
+      {% assign sorted_posts = category[1] | sort | reversed %}
       <div class="item">
         <a class="title active"><i class="dropdown icon"></i> <strong>{{ category[0] | capitalize }}</strong></a>
       </div>

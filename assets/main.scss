@@ -11,6 +11,14 @@ $white:                  white;
 // Theme colors
 $masthead-background:    lightslategray;
 $secondary-color:        bisque;
+
+{% if site.colors.primary %}
+$masthead-background:    {{ site.colors.primary }};
+{% endif %}
+{% if site.colors.secondary %}
+$secondary-color:        {{ site.colors.secondary }};
+{% endif %}
+
 $link-color:             $masthead-background;
 $link-hover:             darken($link-color, 30%);
 

@@ -1,13 +1,11 @@
 $(function() {
-  $('a[href*=#]')
+  $('a[href^="#"]')
   .on('click', function(e) {
-    e.preventDefault();
-    alert('click');
     var target = $(this.hash);
-    if (target.length) {
 
-      $('html,body')
-      .animate({
+    if (target.length) {
+      e.preventDefault();
+      $('html,body').animate({
         scrollTop: (target.offset().top)
       }, 'slow');
       return false;
@@ -19,4 +17,6 @@ $(function() {
   $('footer time')
   .text(n);
 
+  $('.ui.accordion')
+  .accordion();
 });
